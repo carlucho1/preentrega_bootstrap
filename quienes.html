@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quienes</title>
+
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+
+<!-- HEADER y NAV insertados mediante fetch-->
+
+<div id="header_nav">
+
+</div>
+
+  <script>
+    fetch('header_nav.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header_nav').innerHTML = data;
+      });
+  </script>
+
+
+<!-- Cuerpo principal de la página MAIN -->
+
+<main class="main_quienes">
+
+   <h2>Somos una empresa de alto nivel tecnológico con una fuerte impronta comercial</h2>
+
+   <p>En nuestra empresa, combinamos lo mejor de la innovación tecnológica con una sólida estrategia comercial, creando un enfoque único en el mercado. Nos destacamos por integrar tecnología de punta en cada uno de nuestros procesos y productos, garantizando soluciones eficientes, rápidas y adaptadas a las necesidades específicas de nuestros clientes. Con una visión clara del futuro y un equipo experto en las últimas tendencias tecnológicas, trabajamos para ofrecer herramientas que no solo simplifiquen, sino que también potencien el desarrollo de negocios en un entorno cada vez más digitalizado y fuertemente competitivo.<br></p>
+    
+    <p>Nuestra impronta comercial se refleja en la forma en que entendemos y abordamos el mercado. Nos comprometemos a conocer a fondo a nuestros clientes, anticipar sus necesidades y ofrecerles un servicio personalizado que se traduce en resultados tangibles. Creemos firmemente en la construcción de relaciones de largo plazo, basadas en la confianza, la transparencia y el éxito compartido. Nuestro enfoque se centra en brindar valor real, generando propuestas que marquen la diferencia en un entorno de desarrollo maduro y colaborativo.<br></p>
+      
+    <p>Gracias a nuestro conocimiento en tecnología avanzada, podemos ofrecer productos que optimizan procesos, mejoran la eficiencia operativa y promueven la innovación en cada área de negocio. Desde la implementación de sistemas automatizados hasta el desarrollo de plataformas digitales personalizadas, nos aseguramos de que cada solución esté diseñada para aportar un valor agregado claro y sostenible. En definitiva, nuestra empresa es un socio estratégico para quienes buscan no solo estar al día con la tecnología, sino aprovecharla al máximo para alcanzar sus objetivos comerciales. Creemos que la combinación de alta tecnología y un enfoque comercial sólido es la clave para impulsar el crecimiento y el éxito en un mundo en constante evolución.</p>
+   
+    <iframe  src="https://www.youtube.com/embed/uunnO9yZCYk?si=6_FCybG08eua8Evm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+ 
+</main>
+
+<!-- Fin de página FOOTER insertado mediante fetch-->
+
+<div id="footer"></div>
+
+<script>
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer').innerHTML = data;
+    });
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,475 @@
+/* Elijo la tipografía de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Selector universal partimos de tener todo en margin 0 y padding 0 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Defino la paleta de colores */
+
+:root {
+    --color-1: #3519e7; 
+    --color-2: #8557f3;
+    --color-3: #d596ff;
+    --color-fondo: #ffffff; /*Blanco*/
+  }
+  
+  body {
+    font-family: "Roboto", serif;
+    background-color: var(--color-fondo);
+  }
+  
+/* HEADER */
+
+header{
+  height: 10vh;
+  background-color: var(--color-3);
+  /* position: fixed; */
+  
+}
+
+header img{
+  height: 10vh;
+  position: absolute;
+  left:5%
+}
+
+header h1{
+    color: var(--color-1); 
+    position: absolute;
+    left: 30%;
+    padding: 15px 0px;
+}
+
+header h2{
+    color: black;
+    position: absolute;
+    left: 75%;
+    padding: 20px 0px;
+}
+
+/* Barra de navegación NAV */
+
+#superior{
+  height: 7vh;
+  background-color: yellow;
+  border-bottom: 2px solid blueviolet;
+ }
+  
+#superior ul{
+  display: flex;
+  justify-content: space-around;
+  /* Le doy una postion relative para bajar con top y centrar los li que contienen los a */
+  position: relative;
+  top: 15px;
+}
+
+/* Quito las viñetas de los elementos li */
+li {
+  list-style-type: none;
+}
+
+/* Quito el subrayado del link */
+li a{
+  text-decoration: none;
+}
+
+/* FOOTER */
+
+/* Lo hago con grid y tomo a footer como contenedor */
+
+footer{
+  width: 100%;
+  height: 40vh;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.logos_marcas{
+  height: 10vh;
+  grid-column: 1 / 5;
+  grid-row: 1 / 2;
+  display: flex;
+  justify-content: space-around;
+  padding: 12px 20px; /* Centro las imágenes y les dejo un padding de 20 px en los laterales del contenedor */
+  border-top: 1px solid rgb(198, 180, 180); /* Dejo una línea arriba para separar del main */
+}
+
+.logos_marcas img{
+  width: 160px;
+  height: 50px;
+  /* object-fit: contain; */
+}
+
+/* Estos estilos son comunes a las columnas INFORMACIÓN ÚTIL, ACERCA DE NOSOTROS Y CONTÁCTENOS */
+.info_footer{
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: var(--color-3);
+}
+
+.info_util{
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+.info_util ul{
+  padding-left: 83px;
+}
+
+.info_util h3{
+  text-align: center;
+  color: var(--color-1);
+}
+
+.info_util ul li{
+  margin-bottom: 5px;
+  padding-left: 20px;
+}
+
+.acerca_nosotros{
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.acerca_nosotros ul{
+  padding-left: 30px;
+}
+
+.acerca_nosotros h3{
+  text-align: center;
+  color: var(--color-1);
+}
+
+.acerca_nosotros ul li{
+  margin-bottom: 5px;
+  padding-left: 20px;
+}
+
+.contactenos{
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+}
+
+.contactenos h3{
+  text-align: center;
+  color: var(--color-1);
+}
+
+.contactenos ul li{
+  margin-bottom: 5px;
+  padding-left: 125px;
+}
+
+.redes_sociales{
+  grid-column: 4 / 5;
+  grid-row: 2 / 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+  color: var(--color-1);
+  background-color: var(--color-3);
+}
+
+.redes_sociales ul{
+  display: flex;
+  justify-content: center;
+}
+
+.redes_sociales ul li a img{
+  width: 30px;
+  height: 24px;
+  margin-right: 15px;
+}
+
+.copyright{
+  height: 10vh;
+  grid-column: 1 / 5;
+  grid-row: 3 / 4;
+  text-align: center;
+  padding-top: 22px;
+  background-color: black;
+  color: white;
+  border-top: 1px solid white;
+}
+
+/* CSS de página contactos.html */
+
+.main_contacto{
+  display: flex;
+  flex-direction: row;
+  background-color: beige;
+  padding: 5px;
+}
+
+.formulario form{
+  padding-top: 20px;
+  padding-left: 10px;
+  display: inline-block;
+  width: 480px;
+  height: 450px;
+  border: 5px solid var(--color-3);
+  border-radius: 5%;
+}
+
+.formulario h2{
+  text-align: center;
+  color: var(--color-1);
+  /* margin-bottom: 10px; */
+  margin: 10px 0;
+}
+
+.formulario form textarea{
+  resize: none;
+  width: 440px;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+label[for="date"] {
+  margin-left: 30px; /* Ajusta el valor según necesites */
+}
+
+label[form="date"]{
+  margin-left: 20px;
+}
+
+.iframe{
+  text-align: center;
+  border: 2px solid var(--color-2);
+  border-radius: 5%;
+  margin-left: 10px;
+}
+
+.iframe h2{
+  margin-top: 10px;
+  color: var(--color-1);
+}
+
+.iframe iframe{
+  padding: 10px;
+  margin-left: 10px;
+  width: 1000px;
+  height: 450px;
+}
+
+/* CSS de página productos.html */
+
+.main_productos h2{
+  text-align: center;
+  color: var(--color-1);
+}
+
+.main_productos .productos{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.main_productos .productos img{
+  width: 300px;
+  height: auto;
+}
+
+/* CSS de página quienes.html */
+
+.main_quienes{
+  color: black;
+}
+
+.main_quienes h2{
+  text-align: center;
+  color: var(--color-1);
+  margin: 10px;
+}
+
+.main_quienes p{
+  font-family: 'Comic Sans MS', cursive;  
+  padding: 0 20px;
+  text-align: justify;
+  color: black;
+  margin-bottom: 20px;
+  text-indent: 15px;
+}
+
+.main_quienes iframe{
+  width: 800px;
+  height: 450px;
+  position: relative;
+ left: 400px
+}
+
+/* CSS de página index.html (el main, que incluye el CSS de la card) */
+
+/* MAIN */
+
+.main_index{
+  padding-bottom: 5px;
+}
+
+.index_1 img{
+  width: 100vw;
+  height: 83vh;
+  object-fit: cover;
+}
+
+/* Empieza la CARD */
+
+.container_cards{
+  /* border: 2px solid blue; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-left: 30px;
+  justify-content: start;
+  align-content: center;
+}
+
+/* Evita que aparezca la línea debajo del texto del hipervínculo */
+.container_cards a{
+  text-decoration: none;  
+}
+
+/* Estilo a todo el contenedor que alberga la card */
+.card{
+  border: solid 3px rgb(199, 69, 69);
+  width: 200px;
+  height: 300px;
+  border-radius: 20px;
+  background-color: yellow;
+}
+
+/* object-fit: contain: La imagen se ajustará al contenedor sin recortarse, pero puede dejar espacio vacío alrededor si las proporciones son diferentes. */
+.card #top{
+  height: 100px;
+  width: 100%;
+  object-fit: contain;
+}
+
+/* Estilo al h2 */
+.card h2{
+  padding-top: 10px;
+  text-align: center;
+  color: blue;
+  height: 50px;
+  border-top: solid 2px rgb(189, 28, 71);
+  border-bottom: solid 2px rgb(189, 28, 71);
+  font-size: 1.6rem
+  }
+
+/* Estilo a p */
+.card p{
+  border-bottom: solid 2px rgb(189, 28, 71);
+  height: 100px;
+  text-align: justify;
+  padding: 0 5px;
+  padding: 5px 5px;
+  font-weight: 300;
+  font-size: 0.75rem;
+  color: blueviolet;
+}  
+
+.card #bottom{
+  width: 40px;
+  border-radius: 80%;
+  height: 40px;
+}
+
+.precio{
+  position: relative;
+  bottom: 35px;
+  left: 90px
+}
+
+/* Media queries */
+
+@media (max-width: 412px) {
+
+
+  /* HEADER */
+
+header img{
+    display: inline-block;
+    width: 100px;
+    height: auto;
+    margin: 5px;
+   }
+
+header{
+    /* max-width: 412px; */
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  
+
+
+  /* FOOTER */
+
+  footer {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .logos_marcas {
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .logos_marcas img {
+    width: 100px;
+    height: auto;
+    margin: 5px;
+  }
+
+  .info_footer {
+    height: auto;
+    padding: 10px;
+  }
+
+  .info_util,
+  .acerca_nosotros,
+  .contactenos,
+  .redes_sociales {
+    grid-column: 1 / 5;
+    padding: 10px;
+  }
+
+  .info_util ul,
+  .acerca_nosotros ul,
+  .contactenos ul {
+    padding-left: 20px;
+  }
+
+  .contactenos ul li {
+    padding-left: 20px;
+  }
+
+  .redes_sociales ul {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .redes_sociales ul li a img {
+    width: 24px;
+    height: 24px;
+    margin: 0 10px;
+  }
+
+  .copyright {
+    height: auto;
+    padding: 10px 0;
+  }
+}
