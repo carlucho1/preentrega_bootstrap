@@ -3,333 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
-    
-    <!-- Incorporamos estilo con css -->
-    <link rel="stylesheet" href="./styles/style.css">
+    <title>Document</title>
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">   
+
+     <!-- Incorporamos estilo con css -->
+     <link rel="stylesheet" href="./styles/style.css">
 </head>
 
 <body>
 
-<!-- Encabezado de la página web HEADER -->
+  <header>
 
-<header>
-    <img src="./images/logo.png" alt="Logo de la empresa">
-    <h1>Productos de computación y Redes</h1>
-    <h2>Ofertas de último momento</h2>
-</header>
+    <nav class="navbar navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="./images/logo.png" alt="" width="auto" height="73px" class="d-inline-block align-text-center">
+        </a>
+        <h1>Productos de computación y Redes</h1>
+        <a href="" class="navbar-brand" href="#">
+          <h2>Ofertas de último momento</h2>
+        </a>
+        
+      </div>
+    </nav>
 
-<!-- Barra de navegación NAV -->
+  <!-- <ul class="nav nav-pills nav-fill">
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" aria-current="page" href="#">Quiénes somos</a>
+      </li>     
+    <li class="nav-item">
+      <a class="nav-link" href="#">Productos</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link">Contacto</a>
+    </li>
+  </ul> -->
 
-<nav id="superior">
-    <!-- Defino una lista desordenada -->
-
-    <ul>
-        <li><a href="./index.html">Inicio</a></li>
-        <li><a href="./quienes.html">Quiénes somos</a></li>
-        <li><a href="./productos.html">Productos</a></li>
-        <li><a href="./contacto.html">Contacto</a></li>
-    </ul>
-
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled">Disabled</a>
+          </li>
+        </ul>
+      </div>
+    </div>
 </nav>
+  </header>
 
-<!-- Cuerpo principal de la página MAIN -->
+    <!-- Carrousel -->
 
-<main class="main_index">
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
 
-    <div class="index_1">
-        <img src="./images/motherboard-683247_1280.png" alt="Motherboard AMD">
-    </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="3000">
+          <img src="./images/carousel_1.jpg" class="d-block w-100" alt="..." style="object-fit: cover;" height="590px">
+        </div>
+        <div class="carousel-item" data-bs-interval="3000">
+          <img src="./images/carousel_2.jpg" class="d-block w-100" alt="..." style="object-fit: cover;" height="590">
+        </div>
+        <div class="carousel-item" data-bs-interval="3000">
+          <img src="./images/carousel_3.jpg" class="d-block w-100" alt="..." style="object-fit: cover;" height="590">
+        </div>
+      </div>
 
-    <!-- Ahora coloco las cards que diseñé aparte y las pongo con flex-wrap: wrap para permitirle que haga wrap -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
 
-    <div class="container_cards">    
-         
-        <a href="https://www.cisco.com/c/en/us/products/switches/catalyst-2960-series-switches/datasheet-listing.html" target="_blank">
-        
-            <div class="card">  <!--Contenedor de la card-->
-                
-                <img id="top" src="./images/2960-removebg-preview.png"  alt="Producto de red">
-
-                <h2>CATALYST 2960</h2>
-        
-                <p>*Product Code:WS-C2960X-48FPD-L
-                    *Enclosure Type:Rack-mountable - 1U
-                    *Feature Set:LAN Base
-                    *Uplink Interfaces:2 x 10G SFP+
-                    *Ports
-                    48 x 10/100/1000 Ethernet Gigabit ports
-                </p>
-        
-                <img id="bottom" src="./images/cliente_1.png"  alt="Foto de usuario">
-        
-                <!-- Le pongo un id para en css manejarlo con position relative -->
-                <h3 class="precio">U$S 2600</h3>
-             </div>
-        </a>
-
-        <a href="https://www.cisco.com/c/en/us/products/switches/catalyst-2960-series-switches/datasheet-listing.html" target="_blank">
-        
-            <div class="card">  <!--Contenedor de la card-->
-                <img id="top" src="./images/2960_1-removebg-preview.png"  alt="Producto de red">
-
-                <h2>CATALYST 2960</h2>
-        
-                <p>*Product Code:WS-C2960X-48FPD-L
-                *Enclosure Type:Rack-mountable - 1U
-                *Feature Set:LAN Base
-                *Uplink Interfaces:2 x 10G SFP+
-                *Ports
-                48 x 10/100/1000 Ethernet Gigabit ports
-                </p>
-        
-                <img id="bottom" src="./images/cliente_1.png"  alt="Foto de usuario">
-        
-                <!-- Le pongo un id para en css manejarlo con position relative -->
-                <h3 class="precio">U$S 2600</h3>
-
-            </div>
-        </a>
-
-        <a href="https://www.cisco.com/c/en/us/products/switches/catalyst-2960-series-switches/datasheet-listing.html" target="_blank">
-        
-            <div class="card">  <!--Contenedor de la card-->
-                <img id="top" src="./images/combo_desktop.png"  alt="Producto de red">
-
-                <h2>Pc Intel Core i5</h2>
-        
-                <p> • Motherboard 1700 14°Gen - Msi Pro H610M-S DDR4 • Procesador Intel Core i5 12400 4.4 Ghz Alder Lake 1700 • Memoria Ram DDR4 - 16Gb 3200 Mhz Crucial Value •
-                </p>
-        
-                <img id="bottom" src="./images/cliente_1.png"  alt="Foto de usuario">
-        
-                <!-- Le pongo un id para en css manejarlo con position relative -->
-                <h3 class="precio">$413.549</h3>
-
-            </div>
-        </a>
-
-        <a href="https://www.cisco.com/c/en/us/products/switches/catalyst-2960-series-switches/datasheet-listing.html" target="_blank">
-        
-            <div class="card">  <!--Contenedor de la card-->
-                <img id="top" src="./images/Notebook_1.png"  alt="Producto de red">
-
-                <h2>Asus X515 Intel</h2>
-        
-                <p>Notebook Asus X515 Core i7 1165g7 15.6" FHD Windows 11 Home. RAM 8GB DDR4, SSD 512GB slot M2
-                </p>
-        
-                <img id="bottom" src="./images/cliente_1.png"  alt="Foto de usuario">
-        
-                <!-- Le pongo un id para en css manejarlo con position relative -->
-                <h3 class="precio">$ 1.108.900</h3>
-
-            </div>
-        </a>
-
-        <a href="https://www.cisco.com/c/en/us/products/switches/catalyst-2960-series-switches/datasheet-listing.html" target="_blank">
-        
-            <div class="card">  <!--Contenedor de la card-->
-                <img id="top" src="./images/nvidia_msi.png"  alt="Producto de red">
-
-                <h2>NVIDIA 3050</h2>
-        
-                <p>Placa De Video MSI Nvidia Geforce RTX 3050 Ventus 2X 6Gb OC GDDR6
-                    MODELO: GEFORCE RTX 3050 VENTUS 2X 6G OC | GTIN: 4711377176811
-                </p>
-        
-                <img id="bottom" src="./images/cliente_1.png"  alt="Foto de usuario">
-        
-                <!-- Le pongo un id para en css manejarlo con position relative -->
-                <h3 class="precio">S 270.500</h3>
-
-            </div>
-        </a>
-
-        <a href="https://www.cisco.com/c/en/us/products/switches/catalyst-2960-series-switches/datasheet-listing.html" target="_blank">
-        
-            <div class="card">  <!--Contenedor de la card-->
-                <img id="top" src="./images/2960_1-removebg-preview.png"  alt="Producto de red">
-
-                <h2>CATALYST 2960</h2>
-        
-                <p>*Product Code:WS-C2960X-48FPD-L
-                *Enclosure Type:Rack-mountable - 1U
-                *Feature Set:LAN Base
-                *Uplink Interfaces:2 x 10G SFP+
-                *Ports
-                48 x 10/100/1000 Ethernet Gigabit ports
-                </p>
-        
-                <img id="bottom" src="./images/cliente_1.png"  alt="Foto de usuario">
-        
-                <!-- Le pongo un id para en css manejarlo con position relative -->
-                <h3 class="precio">U$S 2600</h3>
-
-            </div>
-        </a>
-
-        <a href="https://www.cisco.com/c/en/us/products/switches/catalyst-2960-series-switches/datasheet-listing.html" target="_blank">
-        
-            <div class="card">  <!--Contenedor de la card-->
-                <img id="top" src="./images/2960_1-removebg-preview.png"  alt="Producto de red">
-
-                <h2>CATALYST 2960</h2>
-        
-                <p>*Product Code:WS-C2960X-48FPD-L
-                *Enclosure Type:Rack-mountable - 1U
-                *Feature Set:LAN Base
-                *Uplink Interfaces:2 x 10G SFP+
-                *Ports
-                48 x 10/100/1000 Ethernet Gigabit ports
-                </p>
-        
-                <img id="bottom" src="./images/cliente_1.png"  alt="Foto de usuario">
-        
-                <!-- Le pongo un id para en css manejarlo con position relative -->
-                <h3 class="precio">U$S 2600</h3>
-
-            </div>
-        </a>
-
-        <a href="https://www.cisco.com/c/en/us/products/switches/catalyst-2960-series-switches/datasheet-listing.html" target="_blank">
-        
-            <div class="card">  <!--Contenedor de la card-->
-                <img id="top" src="./images/2960_1-removebg-preview.png"  alt="Producto de red">
-
-                <h2>CATALYST 2960</h2>
-        
-                <p>*Product Code:WS-C2960X-48FPD-L
-                *Enclosure Type:Rack-mountable - 1U
-                *Feature Set:LAN Base
-                *Uplink Interfaces:2 x 10G SFP+
-                *Ports
-                48 x 10/100/1000 Ethernet Gigabit ports
-                </p>
-        
-                <img id="bottom" src="./images/cliente_1.png"  alt="Foto de usuario">
-        
-                <!-- Le pongo un id para en css manejarlo con position relative -->
-                <h3 class="precio">U$S 2600</h3>
-
-            </div>
-        </a>
-
-        <a href="https://www.cisco.com/c/en/us/products/switches/catalyst-2960-series-switches/datasheet-listing.html" target="_blank">
-        
-            <div class="card">  <!--Contenedor de la card-->
-                <img id="top" src="./images/2960_1-removebg-preview.png"  alt="Producto de red">
-
-                <h2>CATALYST 2960</h2>
-        
-                <p>*Product Code:WS-C2960X-48FPD-L
-                *Enclosure Type:Rack-mountable - 1U
-                *Feature Set:LAN Base
-                *Uplink Interfaces:2 x 10G SFP+
-                *Ports
-                48 x 10/100/1000 Ethernet Gigabit ports
-                </p>
-        
-                <img id="bottom" src="./images/cliente_1.png"  alt="Foto de usuario">
-        
-                <!-- Le pongo un id para en css manejarlo con position relative -->
-                <h3 class="precio">U$S 2600</h3>
-
-            </div>
-        </a>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
 
     </div>
-       
-</main>
-
-<!-- Agrego una sección en donde se pondrá algo anexo que no forme parte de la página principal. Por ejemplo podría ser un rubro de Ofertas de productos o de servicios -->
-
-<section>
-
-
-
-</section>
-
-<!-- Fin de página FOOTER -->
-
-<footer>
-
-    <!-- Logos de marcas -->
-    <div class="logos_marcas">
-        <img src="./images/GIGABYTE.png" alt="GIGABYTE">
-        <img src="./images/hyperx.png" alt="HYPER">
-        <img src="./images/Kingston.png" alt="KINGSTON">
-        <img src="./images/logo_MSI.png" alt="MSI">
-        <img src="./images/logo_Redragon.png" alt="REDRAGON">
-        <img src="./images/thermaltake.png" alt="THERMALTAKE">
-        <img src="./images/viewsonic-logo.png" alt="VIEWSONIC">
-        <img src="./images/wacom.png" alt="WACON">
-    </div>
-
-    <!-- NAV de INFORMACIÓN ÚTIL para el cliente -->
-    <nav class="info_footer info_util">
-        <h3>INFORMACIÓN ÚTIL</h3>
-        <ul>
-            <li><a href="#">PREGUNTAS FRECUENTES</a></li>
-            <li><a href="#">FORMAS DE PAGO</a></li>
-            <li><a href="#">BOTÓN DE ARREPENTIMIENTO</a></li>
-            <li><a href="#">DEFENSA AL CONSUMIDOR</a></li>
-        </ul>
-    </nav>
-
-      <!-- NAV de ACERCA DE NOSOTROS -->
-    <nav class="info_footer acerca_nosotros">
-        <h3>ACERCA DE NUESTRA EMPRESA</h3>
-          <ul>
-              <li><a href="">QUIÉNES SOMOS</a></li>
-              <li><a href="">CONTACTO</a></li>
-              <li><a href="">TRABAJAR CON NOSOTROS</a></li>
-              <li><a href="">BLOG</a></li>
-          </ul>
-    </nav>
-
-    <!-- NAV de CONTÁCTENOS -->
-    <nav class="info_footer contactenos">
-        <h3>CONTÁCTENOS</h3>
-          <ul>
-              <li><a href="">QUIERO SER REVENDEDOR</a></li>
-              <li><a href="">QUIERO QUE ME LLAMEN</a></li>
-              <li>+34 629 366 748</li>
-              <li>C. de San Lorenzo, 15, Centro, 28004 Madrid, España</li>
-          </ul>
-    </nav>
-
-    <!-- NAV de REDES SOCIALES -->
-    <nav class="redes_sociales">
-        <h2>NUESTRAS REDES SOCIALES</h2>
-        <ul>
-            <li>
-                <a href="https://www.instagram.com/" target="_blank"><img src="./images/instagram.png" alt="Instagram"></a>
-            </li>
-            <li>     
-                <a href="https://www.facebook.com/" target="_blank"><img src="./images/facebook.png" alt="Facebook"></a>
-            </li>
-            <li>
-                <a href="https://www.youtube.com/" target="_blank"><img src="./images/youtube.png" alt="Youtube"></a>
-            </li>
-            <li>
-                <a href="https://x.com/" target="_blank"><img src="./images/x.png" alt="Youtube"></a>
-            </li>
-            <li>
-                <a href="https://www.tiktok.com/discover?lang=es" target="_blank"><img src="./images/tiktok.png" alt="Tik Tok"></a>
-            </li>
-            <li>
-                <a href="https://www.whatsapp.com/?lang=es_LA" target="_blank"><img src="./images/whatsapp.png" alt="Whatsapp"></a>
-            </li>
-        </ul>
-    </nav>
-
-    <!-- Copyright -->
-    <p class="copyright">Copyright © 2024 - Todos los derechos reservados. Prohibida su reproducción</p>
     
-</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     
 </body>
-
 </html>
