@@ -75,3 +75,27 @@ a {
   bottom: 30px;
   left: 70px
 }
+
+/* Media queries */
+
+@media (max-width: 575.98px) {
+
+  /* HEADER */
+
+      .custom-class {
+        display: block;
+      }
+
+  /* header {
+      display: block;
+      height: auto;
+      flex-direction: column;
+    }
+
+  header img {
+    display: inline-block;
+    width: 100px;
+    height: auto;
+    margin: 5px;
+  } */
+}
