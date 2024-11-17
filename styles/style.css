@@ -81,9 +81,13 @@ a {
 /* Responsividad para pantallas pequeñas */
   @media (max-width: 576px) {
 
+    body{
+      background-color: bisque;
+    }
+
     /* Ajuste del header */
       .navbar-brand img {
-        max-height: 40px;
+        max-height: 60px;
       }
     
       h1,
