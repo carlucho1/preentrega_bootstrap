@@ -80,8 +80,21 @@ a {
 
 /* Responsividad para pantallas pequeñas */
   @media (max-width: 576px) {
+
+    /* Ajuste del header */
+      .navbar-brand img {
+        max-height: 40px;
+      }
+    
+      h1,
+      h2 {
+        font-size: 1.2rem;
+        text-align: center;
+      }
+
     #container_cards .col-2 {
       flex: 0 0 100%;
+      justify-content: center;
       /* Cada card ocupa el 100% del ancho */
       max-width: 100%;
     }
@@ -102,15 +115,5 @@ a {
 
     .card h3.precio {
       font-size: 1rem;
-    }
-
-    /* Ajuste del header */
-    .navbar-brand img {
-      max-height: 40px;
-    }
-
-    h1,
-    h2 {
-      font-size: 1.2rem;
     }
   }
