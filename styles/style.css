@@ -101,6 +101,13 @@
  /* Responsividad para pantallas pequeñas */
 
  @media (max-width: 576px) {
+
+  /* Estilo de letra de Google Fonts Roboto */
+  body {
+      font-family: "Roboto", sans-serif;
+      overflow-x: hidden;
+    }
+
    /* HEADER */
 
    .logo {
@@ -134,11 +141,9 @@
    /* El nav ya es responsivo por naturaleza, estilo hamburguesa */
 
    /* MAIN - CARDS */
-   /* Estilo de letra de Google Fonts Roboto */
+   
 
-   body {
-     font-family: "Roboto", sans-serif;
-   }
+   
 
    /* Evita que aparezca la línea debajo del texto del hipervínculo */
    a {
@@ -151,6 +156,7 @@
     gap: 10px;
     margin-left: 30px;
     margin-top: 10px;
+    width: 100%;
    }
 
    /* Estilo a todo el contenedor que alberga la card */
