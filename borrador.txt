@@ -1,0 +1,48 @@
+{
+  /* Ajuste del header */
+
+  #header .logo a{
+    display: block;
+    margin: 0 auto;
+  }
+
+  #header .logo a img {
+    width: 100%;
+  }
+
+  .logo_mobile h1 {
+    font-size: 1.3rem;
+    color: blue;
+    margin: 0 auto;
+  }
+
+  .logo_mobile h2 {
+    font-size: 1.2rem;
+    margin: 0 auto;
+  }
+
+  #container_cards .col-2 {
+    flex: 0 0 100%;
+    justify-content: center;
+    /* Cada card ocupa el 100% del ancho */
+    max-width: 100%;
+  }
+
+  .card {
+    margin-bottom: 15px;
+    /* Margen inferior para separar cards en móviles */
+  }
+
+  /* Ajustes del texto en dispositivos móviles */
+  .card h2 {
+    font-size: 1rem;
+  }
+
+  .card p {
+    font-size: 0.85rem;
+  }
+
+  .card h3.precio {
+    font-size: 1rem;
+  }
+}

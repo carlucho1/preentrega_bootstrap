@@ -1,129 +1,125 @@
-/* Selector universal partimos de tener todo en margin 0 y padding 0 */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+ /* Selector universal partimos de tener todo en margin 0 y padding 0 */
+ * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+ }
 
-/* CSS CARDS */
+ /* Media queries */
 
-#container_cards {
-  /* border: 2px solid blue; */
-  /* display: flex;
+ @media (min-width: 992px) and (max-width: 1600px) {
+   /* HEADER - El header comprende al header y al nav*/
+
+   #header {
+     height: 10vh;
+   }
+
+   #nav {
+     height: 7vh;
+   }
+
+   .logo img {
+     width: 160px;
+   }
+
+   #carousel {
+     height: 83vh;
+   }
+
+   /* CSS CARDS */
+
+   #container_cards {
+     /* border: 2px solid blue; */
+     /* display: flex;
   flex-direction: row; */
-  /* flex-wrap: wrap; */
-  /* gap: 10px; */
-  padding-left: 30px;
-  justify-content: start;
-  align-content: center;
-  margin-bottom: 5px;
-}
+     /* flex-wrap: wrap; */
+     /* gap: 10px; */
+     padding-left: 30px;
+     justify-content: start;
+     align-content: center;
+     margin-bottom: 5px;
+   }
 
-/* Evita que aparezca la línea debajo del texto del hipervínculo */
-a {
-  text-decoration: none;
-}
+   /* Evita que aparezca la línea debajo del texto del hipervínculo */
+   a {
+     text-decoration: none;
+   }
 
-/* Estilo a todo el contenedor que alberga la card */
-.card {
-  border: solid 3px rgb(199, 69, 69);
-  width: 200px;
-  height: 280px;
-  border-radius: 20px;
-  background-color: yellow;
-  margin: 5px;
-}
+   /* Estilo a todo el contenedor que alberga la card */
+   .card {
+     border: solid 3px rgb(199, 69, 69);
+     width: 200px;
+     height: 280px;
+     border-radius: 20px;
+     background-color: yellow;
+     margin: 5px;
+   }
 
-/* object-fit: contain: La imagen se ajustará al contenedor sin recortarse, pero puede dejar espacio vacío alrededor si las proporciones son diferentes. */
-.card #top {
-  height: 100px;
-  width: 100%;
-  object-fit: contain;
-}
+   /* object-fit: contain: La imagen se ajustará al contenedor sin recortarse, pero puede dejar espacio vacío alrededor si las proporciones son diferentes. */
+   .card #top {
+     height: 100px;
+     width: 100%;
+     object-fit: contain;
+   }
 
-/* Estilo al h2 */
-.card h2 {
-  padding-top: 10px;
-  text-align: center;
-  color: blue;
-  height: 50px;
-  border-top: solid 2px rgb(189, 28, 71);
-  border-bottom: solid 2px rgb(189, 28, 71);
-  font-size: 1.6rem;
-}
+   /* Estilo al h2 */
+   .card h2 {
+     padding-top: 10px;
+     text-align: center;
+     color: blue;
+     height: 50px;
+     border-top: solid 2px rgb(189, 28, 71);
+     border-bottom: solid 2px rgb(189, 28, 71);
+     font-size: 1.6rem;
+   }
 
-/* Estilo a p */
-.card p {
-  border-bottom: solid 2px rgb(189, 28, 71);
-  height: 100px;
-  text-align: justify;
-  padding: 0 5px;
-  padding: 5px 5px;
-  font-weight: 300;
-  font-size: 0.75rem;
-  color: blueviolet;
-}
+   /* Estilo a p */
+   .card p {
+     border-bottom: solid 2px rgb(189, 28, 71);
+     height: 100px;
+     text-align: justify;
+     padding: 0 5px;
+     padding: 5px 5px;
+     font-weight: 300;
+     font-size: 0.75rem;
+     color: blueviolet;
+   }
 
-.card #bottom {
-  width: 40px;
-  border-radius: 80%;
-  height: 40px;
-}
+   .card #bottom {
+     width: 40px;
+     border-radius: 80%;
+     height: 40px;
+   }
 
-.precio {
-  position: relative;
-  bottom: 30px;
-  left: 70px;
-}
+   .precio {
+     position: relative;
+     bottom: 30px;
+     left: 70px;
+   }
+ }
 
-/* Media queries */
+ /* Responsividad para pantallas pequeñas */
+ @media (max-width: 576px) {
 
-/* Responsividad para pantallas pequeñas */
-@media (max-width: 575.98px) {
-  /* Ajuste del header */
+   .logo {
+     flex-direction: column;
+     justify-content: center;
+     align-content: center;
+   }
 
-  #logo a {
-    display: block;
-    margin: 0 auto
-  }
+   .logo img {
+     width: 100%;
+   }
 
-  #logo a img {
-    width: 100%;
-  }
+   .logo h1 {
+     font-size: 1.3rem;
+     color: blue;
+     margin: 10px 0px 0px 0px;
+   }
 
-  #logo h1 {
-    font-size: 1.3rem;
-    color: blue;
-    margin: 0 auto;
-  }
-
-  #logo h2 {
-    font-size: 1.2rem;
-    margin: 0 auto;
-  }
-
-  #container_cards .col-2 {
-    flex: 0 0 100%;
-    justify-content: center;
-    /* Cada card ocupa el 100% del ancho */
-    max-width: 100%;
-  }
-
-  .card {
-    margin-bottom: 15px;
-    /* Margen inferior para separar cards en móviles */
-  }
-
-  /* Ajustes del texto en dispositivos móviles */
-  .card h2 {
-    font-size: 1rem;
-  }
-
-  .card p {
-    font-size: 0.85rem;
-  }
-
-  .card h3.precio {
-    font-size: 1rem;
-  }
-}
+   .logo a h2 {
+     font-size: 1.3rem;
+     color: black;
+     margin: 0;
+   }
+ }
