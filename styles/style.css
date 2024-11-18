@@ -102,10 +102,14 @@
 
  @media (max-width: 576px) {
 
-  /* Estilo de letra de Google Fonts Roboto */
+
   body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      /* Estilo de letra de Google Fonts Roboto */
       font-family: "Roboto", sans-serif;
-      overflow-x: hidden;
+        overflow-x: hidden;
     }
 
    /* HEADER */
@@ -113,7 +117,7 @@
    .logo {
      flex-direction: column;
      justify-content: center;
-     align-content: center;
+     align-items: center;
    }
 
    .logo img {
@@ -132,31 +136,26 @@
      margin: 0;
    }
 
-   /* CAROUSEL */
-
-  /* #carousel{
-    margin-bottom: 10px;
-  } */
-
    /* El nav ya es responsivo por naturaleza, estilo hamburguesa */
 
-   /* MAIN - CARDS */
-   
+   /* CAROUSEL */
 
-   
+
+   /* MAIN - CARDS */
 
    /* Evita que aparezca la línea debajo del texto del hipervínculo */
    a {
      text-decoration: none;
    }
 
-   .card_mobile{
-    flex-direction: column;
-    justify-content: space-evenly;
-    gap: 10px;
-    margin-left: 20px;
-    margin-top: 10px;
-    width: 100%;
+   .card_mobile {
+     flex-direction: column;
+     justify-content: space-evenly;
+     gap: 10px;
+     margin-left: 20px;
+     margin-right: auto;
+     margin-top: 10px;
+     width: 100vw;
    }
 
    /* Estilo a todo el contenedor que alberga la card */
