@@ -109,7 +109,7 @@
       box-sizing: border-box;
       /* Estilo de letra de Google Fonts Roboto */
       font-family: "Roboto", sans-serif;
-        overflow-x: hidden;
+      overflow-x: hidden;
     }
 
    /* HEADER */
@@ -149,11 +149,12 @@
    }
 
    .card_mobile {
+    border: 3px solid blue;
+    padding-left: 15px;
      flex-direction: column;
      justify-content: space-evenly;
+     align-content: center;
      gap: 10px;
-     margin-left: 20px;
-     margin-right: auto;
      margin-top: 10px;
      width: 100vw;
    }
