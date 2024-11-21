@@ -100,7 +100,7 @@
 
  /* Responsividad para pantallas pequeñas */
 
- @media (max-width: 576px) {
+ @media (max-width: 360px) {
 
 
   body {
@@ -150,13 +150,19 @@
 
    .card_mobile {
     border: 3px solid blue;
-    padding-left: 15px;
+    padding-left: auto;
+    padding-right: auto;
      flex-direction: column;
      justify-content: space-evenly;
      align-content: center;
      gap: 10px;
      margin-top: 10px;
      width: 100vw;
+   }
+
+   .cont_img a img{
+    align-content: center;
+
    }
 
    /* Estilo a todo el contenedor que alberga la card */
